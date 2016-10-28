@@ -1,5 +1,5 @@
 /*!
-Theme Name: Strapped
+Theme Name: Strapped - Anne
 Theme URI: http://underscores.me/
 Author: Brad Williams
 Author URI: http://braginteractive.com
@@ -19,9 +19,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
 @import "bootstrap";
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -43,25 +41,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Infinite scroll
 # Media
 	## Captions
-	## Galleries
+	## Gallerie
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
 
 /*--------------------------------------------------------------
 # Forms
@@ -70,8 +53,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 /*--------------------------------------------------------------
 # Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
+--------------------------------------------------------------
+@import "navigation/navigation";*/
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -88,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "modules/clearings";
 
-/*--------------------------------------------------------------
+/*xxxx--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
@@ -98,14 +81,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "site/site";
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-
