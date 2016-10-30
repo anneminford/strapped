@@ -146,11 +146,11 @@ gulp.task( 'watch', function() {
   });
  
   // don't listen to whole js folder, it'll create an infinite loop
-  gulp.watch( [ './js/**/*.js', '!./js/dist/*.js' ], [ 'scripts' ] )
+  gulp.watch( [ './js/**/*.js', '!./js/dist/*.js' ], [ 'scripts', reload ] )
  
-  gulp.watch( './sass/**/*.scss', ['sass'] );
+  gulp.watch( './sass/**/*.scss', ['sass', reload] );
 
-  gulp.watch( './images/**/*', ['images']);
+  gulp.watch( './images/**/*', ['images', reload]);
  
   gulp.watch( './**/*.php' ).on( 'change', function( file ) {
     // reload browser whenever any PHP file changes
@@ -159,20 +159,6 @@ gulp.task( 'watch', function() {
 } );
 
 
-// Watch
-// gulp.task('watch', function() {
-//   browserSync.init({
-//     files: ['./**/*.php'],
-//     proxy: 'http://localhost:81/wordpress-trevrybarn/',
-//   });
-//   gulp.watch('./sass/**/*.scss', ['sass', reload]);
-//   gulp.watch('./js/*.js', ['js', reload]);
-//   gulp.watch('images/src/*', ['images', reload]);
-// });
-
-
-
- 
  
 gulp.task( 'default', ['watch'], function() {
  // Does nothing in this task, just triggers the dependent 'watch'
