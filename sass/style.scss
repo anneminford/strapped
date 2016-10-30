@@ -19,6 +19,9 @@ Underscore is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+
+@import "vars/variables-site";
 @import "bootstrap";
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -38,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "vars/variables-site";
+
 @import "mixins/mixins-master";
 
 

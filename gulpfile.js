@@ -3,7 +3,7 @@ var gulp = require( 'gulp' ),
   plumber = require( 'gulp-plumber' ),
   autoprefixer = require('gulp-autoprefixer'),
   watch = require( 'gulp-watch' ),
-  livereload = require( 'gulp-livereload' ),
+  //livereload = require( 'gulp-livereload' ),
   jshint = require( 'gulp-jshint' ),
   stylish = require( 'jshint-stylish' ),
   uglify = require( 'gulp-uglify' ),
@@ -14,6 +14,8 @@ var gulp = require( 'gulp' ),
   imagemin = require('gulp-imagemin');
   bower = require('gulp-bower');
   zip = require('gulp-zip');
+  browserSync   = require('browser-sync').create(),
+  reload        = browserSync.reload;
 
 var config = {
      bowerDir: './bower_components' 
@@ -137,6 +139,11 @@ gulp.task('images', function() {
 // Start the livereload server and watch files for change
 gulp.task( 'watch', function() {
   //livereload.listen();
+
+  browserSync.init({
+    files: ['./**/*.php'],
+    proxy: 'http://localhost:81/wordpress-trevrybarn/',
+  });
  
   // don't listen to whole js folder, it'll create an infinite loop
   gulp.watch( [ './js/**/*.js', '!./js/dist/*.js' ], [ 'scripts' ] )
@@ -150,6 +157,21 @@ gulp.task( 'watch', function() {
     //livereload.changed( file );
   } );
 } );
+
+
+// Watch
+// gulp.task('watch', function() {
+//   browserSync.init({
+//     files: ['./**/*.php'],
+//     proxy: 'http://localhost:81/wordpress-trevrybarn/',
+//   });
+//   gulp.watch('./sass/**/*.scss', ['sass', reload]);
+//   gulp.watch('./js/*.js', ['js', reload]);
+//   gulp.watch('images/src/*', ['images', reload]);
+// });
+
+
+
  
  
 gulp.task( 'default', ['watch'], function() {
