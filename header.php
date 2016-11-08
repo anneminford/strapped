@@ -19,11 +19,12 @@
 
 <body <?php body_class(); ?>>
 <?php get_template_part('gtm-include'); ?>
+<?php if (rwmb_meta('trevyrbarn_strap_text') != '') {
+$strapline = rwmb_meta('trevyrbarn_strap_text');
+}?>
 <header>
   <div class="brand">Trevyr Barn</div>
-  <div class="address-bar">Luxury holiday cottage in South Wales</div>
-  
- 
+  <div class="address-bar"><?php echo $strapline; ?></div>
   
   <?php // REMOVED STANDARD WP NAV wp_nav_menu( array( 
 //            'theme_location' => 'primary',
