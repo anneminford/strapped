@@ -12,13 +12,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="google-site-verification" content="PO3bWDpUEh4O6XXwnmfyfxrKRDf8JsRrNIcGdzv3POs" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="//use.typekit.net/tty6xpj.js"></script> -->
-<!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+<script type="text/javascript" src="//use.typekit.net/tty6xpj.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php wp_head(); ?>
 </head>
 
@@ -62,12 +57,10 @@ $strapline = rwmb_meta('trevyrbarn_strap_text');
             }
             ?>
 
-        </div>
-      </div>
-    </div>           
-  </nav>
-
-
-
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container --> 
+</nav>
 <div class="container test">
 

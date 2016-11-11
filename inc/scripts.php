@@ -14,3 +14,10 @@ function strapped_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'strapped_scripts' );
+
+function wpb_add_google_fonts() {
+
+wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Josefin+Slab', false ); 
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );

@@ -81,6 +81,14 @@ function dwp_register_meta_boxes( $meta_boxes ) {
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 20,
             ),
+
+            array(
+                'name'             => esc_html__( 'Footer Images', 'meta-box' ),
+                'id'               => "{$prefix}footer_image",
+                'type'             => 'image_advanced',
+                'max_file_uploads' => 10,
+            ),
+
         ),
     );
 

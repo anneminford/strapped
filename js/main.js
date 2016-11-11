@@ -10,8 +10,3 @@ jQuery( document ).ready(function() {
 	jQuery(".carousel-inner .item:first").addClass("active");
 });
 
-
-
-// jQuery('.carousel').carousel({
-//         interval: 5000 //changes the speed
-//     })

@@ -3,7 +3,7 @@
  *
  * Template Name: common
  *
- * The template for displaying the homepage.
+ * The template for displaying the homepage and other pages.
  *
  *
  * @package bootstrapwp
@@ -12,7 +12,6 @@
 get_header(); ?>
   <?php if(is_front_page()) { 
       get_template_part('carousel','page');
-      echo 'User is on the homepage.';
     }
   ?>
  
@@ -23,7 +22,7 @@ get_header(); ?>
 
   <?php if(is_page('booking-availability')) { 
 	    get_template_part('page','contact');
-	    echo 'User is on the homepage.';
+	    echo 'User is on the booking page.';
 	  }
 	?>
 </div >
