@@ -14,8 +14,7 @@ get_header(); ?>
 <div class="row">
     <div class="box">
       <div class="col-sm-12 text-center">
-
-<div id="carousel-example-generic test" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
 
@@ -46,7 +45,8 @@ get_header(); ?>
     </div>
   </div>
 
-   <?php while ( have_posts() ) : the_post(); ?>
+
+  <?php while ( have_posts() ) : the_post(); ?>
 
       <?php get_template_part( 'content', 'page' );
        
