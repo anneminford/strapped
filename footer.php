@@ -15,18 +15,6 @@
 
 
 
-<?php wp_footer(); ?>
-<script>
-//    jQuery('.carousel').carousel({
-//        interval: 5000 //changes the speed
-//    })
-    
-  
-  //$(function() {
-//      jQuery("img.lazy").lazyload({effect : "fadeIn", container: $("#carousel")});
-//  });
-  </script>
-
-
+</footer>
 </body>
 </html>
