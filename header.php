@@ -27,16 +27,12 @@
 <?php if (rwmb_meta('trevyrbarn_strap_text') != '') {
 $strapline = rwmb_meta('trevyrbarn_strap_text');
 }?>
+
 <header>
-  <div class="brand">Trevyr Barn</div>
-  <div class="address-bar"><?php echo $strapline; ?></div>
-  
-  <?php // REMOVED STANDARD WP NAV wp_nav_menu( array( 
-//            'theme_location' => 'primary',
-//            'container' => false,
-//            'menu_class' => 'menu'
-//      ) ); ?>
+  <div class="brand"><?php the_field('brand_name'); ?></div>
+  <div class="address-bar"><?php the_field('brand_strapline'); ?></div>
 </header>
+
 <nav class="tnavbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,5 +65,5 @@ $strapline = rwmb_meta('trevyrbarn_strap_text');
 
 
 
-<div class="container test">
+<div class="container">
 

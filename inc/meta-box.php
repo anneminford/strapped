@@ -65,16 +65,7 @@ function dwp_register_meta_boxes( $meta_boxes ) {
 
         // List of meta fields
         'fields'     => array(
-            // TEXTAREA
-            array(
-                'name' => esc_html__( 'Strapline Text', 'meta-box' ),
-                'desc' => esc_html__( 'This is for the strapline in the header', 'meta-box' ),
-                'id'   => "{$prefix}strap_text",
-                'type' => 'textarea',
-                'cols' => 20,
-                'rows' => 3,
-            ),
-                        // IMAGE ADVANCED (WP 3.5+)
+            // IMAGE ADVANCED (WP 3.5+)
             array(
                 'name'             => esc_html__( 'Slider Images', 'meta-box' ),
                 'id'               => "{$prefix}sliders_image",

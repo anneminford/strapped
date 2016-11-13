@@ -7,6 +7,53 @@
  * @package Strapped
  */
 
+//ACF
+
+//
+
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
+
+
+$acf_add_options_page = (array(
+	'page_title' => 'Theme Options',
+	'menu_title' => 'Theme Options',
+	'menu_slug' => 'theme-options',
+	'capability' => 'edit_posts',
+	'position' => false,
+	'parent_slug' => '',
+	'icon_url' => false,
+	'redirect' => false
+	));
+
+$acf_add_options_sub_page = (array(
+	'page_title' => 'Header',
+	'menu_title' => 'Header',
+	'menu_slug' => 'theme-options-header',
+	'capability' => 'edit_posts',
+	'position' => false,
+	'parent_slug' => 'theme-options',
+	'icon_url' => false,
+	'redirect' => false,
+));
+
+$acf_add_options_sub_page = (array(
+	'page_title' => 'Footer',
+	'menu_title' => 'Footer',
+	'menu_slug' => 'theme-options-header',
+	'capability' => 'edit_posts',
+	'position' => false,
+	'parent_slug' => 'theme-options',
+	'icon_url' => false,
+	'redirect' => false,
+));
+
+
+}
+
 if ( ! function_exists( 'strapped_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

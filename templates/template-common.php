@@ -10,11 +10,13 @@
  */
 
 get_header(); ?>
+
   <?php if(is_front_page()) { 
       get_template_part('carousel','page');
+      get_template_part('opening','page');
     }
   ?>
- 
+
   <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'content', 'page' );   
   ?>
@@ -26,6 +28,7 @@ get_header(); ?>
 	  }
 	?>
 </div >
+
 <?php get_footer(); ?>
 
 
