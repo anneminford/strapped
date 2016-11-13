@@ -164,6 +164,13 @@ require get_template_directory() . '/inc/meta-box.php';
  */
 require get_template_directory() . '/inc/bootstrap-walker.php';
 
+/**
+ * Custom post types
+ */
+require get_template_directory() . '/inc/post-types/CPT.php';
+require get_template_directory() . '/inc/post-types/register-section.php';
+// require get_template_directory() . '/inc/post-types/register-portfolio.php';
+
 if ( !function_exists( 'strapped_the_custom_logo' ) ) :
 /**
  * Displays the optional custom logo.
