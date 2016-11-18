@@ -9,50 +9,94 @@
 
 //ACF
 
-//
+
+// if( function_exists('acf_add_options_page') ) {
+
+// 	acf_add_options_page('Title');
+// 	acf_add_options_sub_page('Header');
+// 	acf_add_options_sub_page('Footer');
+// 	acf_add_options_sub_page('Accommodation');
 
 
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page();
-	acf_add_options_sub_page('Header');
-	acf_add_options_sub_page('Footer');
+// $acf_add_options_page = (array(
+// 	'page_title' => 'Title',
+// 	'menu_title' => 'Title',
+// 	'menu_slug' => 'theme-options',
+// 	'capability' => 'edit_posts',
+// 	'position' => false,
+// 	'parent_slug' => '',
+// 	'icon_url' => false,
+// 	'redirect' => false
+// 	));
+
+// $acf_add_options_sub_page = (array(
+// 	'page_title' => 'Header',
+// 	'menu_title' => 'Header',
+// 	'menu_slug' => 'theme-options-header',
+// 	'capability' => 'edit_posts',
+// 	'position' => false,
+// 	'parent_slug' => 'theme-options',
+// 	'icon_url' => false,
+// 	'redirect' => false,
+// ));
+
+// $acf_add_options_sub_page = (array(
+// 	'page_title' => 'Footer',
+// 	'menu_title' => 'Footer',
+// 	'menu_slug' => 'theme-options-footer',
+// 	'capability' => 'edit_posts',
+// 	'position' => false,
+// 	'parent_slug' => 'theme-options',
+// 	'icon_url' => false,
+// 	'redirect' => false,
+// ));
+
+// $acf_add_options_sub_page = (array(
+// 	'page_title' => 'Accommodation',
+// 	'menu_title' => 'Accommodation',
+// 	'menu_slug' => 'theme-options-accommodation',
+// 	'capability' => 'edit_posts',
+// 	'position' => false,
+// 	'parent_slug' => 'theme-options',
+// 	'icon_url' => false,
+// 	'redirect' => false,
+// ));
+// }
 
 
-$acf_add_options_page = (array(
-	'page_title' => 'Theme Options',
-	'menu_title' => 'Theme Options',
-	'menu_slug' => 'theme-options',
-	'capability' => 'edit_posts',
-	'position' => false,
-	'parent_slug' => '',
-	'icon_url' => false,
-	'redirect' => false
-	));
+if (function_exists('acf_add_options_page')) {
+  //Create the parent.
+  $parent = acf_add_options_page(array(
+    'page_title'  => 'Content',
+    'menu_title'  => 'Content',
+    'redirect'    => false
+  ));
 
-$acf_add_options_sub_page = (array(
-	'page_title' => 'Header',
-	'menu_title' => 'Header',
-	'menu_slug' => 'theme-options-header',
-	'capability' => 'edit_posts',
-	'position' => false,
-	'parent_slug' => 'theme-options',
-	'icon_url' => false,
-	'redirect' => false,
-));
-
-$acf_add_options_sub_page = (array(
-	'page_title' => 'Footer',
-	'menu_title' => 'Footer',
-	'menu_slug' => 'theme-options-header',
-	'capability' => 'edit_posts',
-	'position' => false,
-	'parent_slug' => 'theme-options',
-	'icon_url' => false,
-	'redirect' => false,
-));
-
-
+  //Create the children.
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Header',
+    'menu_title'  => 'Header',
+    'parent_slug' => $parent['menu_slug'],
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Footer',
+    'menu_title'  => 'Footer',
+    'parent_slug' => $parent['menu_slug'],
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Accommodation',
+    'menu_title'  => 'Accommodation',
+    'parent_slug' => $parent['menu_slug'],
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
 }
+
+
 
 if ( ! function_exists( 'strapped_setup' ) ) :
 /**

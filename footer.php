@@ -13,7 +13,6 @@
     
   ?>
 
-<div>something in here</div>
 </footer>
 </body>
 </html>

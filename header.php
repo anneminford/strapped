@@ -29,8 +29,8 @@ $strapline = rwmb_meta('trevyrbarn_strap_text');
 }?>
 
 <header>
-  <div class="brand"><?php the_field('brand_name'); ?></div>
-  <div class="address-bar"><?php the_field('brand_strapline'); ?></div>
+  <div class="brand"><?php the_field('brand_name', 'option'); ?></div>
+  <div class="address-bar"><?php the_field('brand_strapline', 'option'); ?></div>
 </header>
 
 <nav class="tnavbar navbar-default navbar-fixed-top" role="navigation">
