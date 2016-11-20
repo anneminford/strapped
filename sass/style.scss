@@ -20,7 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-
+@import "font-awesome/font-awesome";
 @import "vars/variables-site";
 @import "bootstrap";
 
@@ -171,7 +171,41 @@ a:hover {
 
 .accreditations ul {
   margin-bottom: 0; }
-
+.socialIcons {
+  margin-bottom:15px;
+}
+.fa-facebook, .fa-google-plus, .fa-twitter {
+  background-color:#3d5295;
+  border:1px solid #3d5295;
+  height: 43px;
+  width: 43px;
+  color: #fff;
+  line-height: 45px!important;
+  text-align: center;
+  font-size:20px!important;
+  margin-right:12px;
+}
+.fa-facebook:hover {
+  background-color:#fff;
+  color:#3d5295;
+}
+.fa-google-plus {
+  background-color:#db402e;
+  margin-right:0;
+  border:1px solid #db402e;
+}
+.fa-google-plus:hover {
+  background-color:#fff;
+  color:#db402e;
+}
+.fa-twitter {
+  background-color:#2fa8e1;
+  border:1px solid #2fa8e1;
+}
+.fa-twitter:hover {
+  color:#2fa8e1;
+  background-color:#fff;
+}
 .alert {
   border: 0;
   border-radius: 0;
@@ -377,35 +411,10 @@ footer p {
 	## Galleries
 --------------------------------------------------------------*/
 
-@import "mixins/mixins-master";
+
 
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-@import "modules/accessibility";
 
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Medias
---------------------------------------------------------------*/
-@import "media/media";

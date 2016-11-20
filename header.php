@@ -17,6 +17,7 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <!-- <script type="text/javascript" src="//use.typekit.net/tty6xpj.js"></script> -->
 <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
 <?php wp_head(); ?>

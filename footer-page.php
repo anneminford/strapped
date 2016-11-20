@@ -11,7 +11,7 @@
 
 
   <ul class="list-inline accreditations">
-  <p><?php the_field('image', 'option'); ?></p>
+
   <?php while( have_rows('footer_logos', 'option') ): the_row(); 
     // vars
     $footerlogo = get_sub_field('image_logo', 'option');
@@ -34,11 +34,7 @@
 
 </div>
       <div class="col-lg-4 text-right">
-       <!--  <ul class="list-inline accreditations">
-          <li> <a href="http://twitter.com/qimzu" class="pure-button socicon-button"><span class="socicon socicon-twitter"></span></a></li>
-          <li> <a href="http://twitter.com/qimzu" class="pure-button socicon-button"><span class="socicon socicon-facebook"></span></a></li>
-          <li> <a href="http://twitter.com/qimzu" class="pure-button socicon-button"><span class="socicon socicon-mail"></span> </a></li>
-        </ul> -->
+<div class="socialIcons"><a href="http://www.facebook.com/share.php?u=http://www.trevyrbarn.co.uk&title=Trevyr Barn, Luxury Holiday Cottage"><i class="fa fa-facebook" aria-hidden="true"></i></a></i> <a href="http://twitter.com/home?status=Trevyr Barn, Luxury Holiday Cottage+http://www.trevyrbarn.co.uk"><i class="fa fa-twitter" aria-hidden="true"></i></a> </div>
       </div>
     </div>
   </div>
